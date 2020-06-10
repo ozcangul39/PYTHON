@@ -1,0 +1,13 @@
+k=int(input("Geben Sie Ihr Gewicht ein:")
+b=float(input("Geben Sie Ihre Grösse ein:"))
+
+bmi=k/b**2
+
+if vki < 18.5:
+    print("vki:",vki,"untergewicht")
+elif 18 <= vki < 25:
+    print("vki:",vki,"normalgewicht")
+elif 25<= vki < 30:
+    print("vki:",vki,"übergewicht")
+else:
+    print("vki:",vki,"fettleibig")
