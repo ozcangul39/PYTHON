@@ -1,0 +1,29 @@
+print("""
+**************
+BENUTZER ANMELDUNG PROGRAMM
+**************
+""")
+
+sys_benuzter_name= "michael"
+sys_passwort= "12345"
+versuch = 3
+
+while True:
+    benuzter_name = input("Bitte Geben Sie Ihren Benutzer Name:")
+    passwort = input("Bitte Geben Sie Ihr Paswort:")
+    if (benuzter_name != sys_benuzter_name and passwort == sys_passwort):
+        print("Benutzer Name ist Falsch...")
+        versuch -= 1
+    elif (benuzter_name == sys_benuzter_name and passwort != sys_passwort):
+        print("Paswort ist Falsch...")
+        versuch -= 1
+    elif (benuzter_name != sys_benuzter_name and passwort != sys_passwort):
+        print("Benutzer Name und Paswort sind Falsch...")
+        versuch -= 1
+    else:
+        print("das System wurde erfolgerich eingegeben....")
+        break
+
+    if versuch ==0:
+        print("Der Versuch ist beendet...")
+        break
