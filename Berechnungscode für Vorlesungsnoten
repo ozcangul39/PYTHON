@@ -1,0 +1,27 @@
+print(""" Berechnungscode für Vorlesungsnoten""")
+
+v1=float(input("Bitte geben Sie Ihre Note Ihrer Zwischenprüfung1:"))
+v2=float(input("Bitte geben Sie Ihre Note Ihrer Zwischenprüfung2:"))
+f=float(input("Bitte geben Sie Ihre Note Ihrer Abschlussprüfung::"))
+
+note=v1*0.3+v2*0.3+f*0.4
+print("Durchschnittsnote:",int(note))
+
+if note>=90:
+    print("AA")
+elif note>=85:
+    print("BA")
+elif note >= 80:
+    print("BB")
+elif note >= 75:
+    print("CB")
+elif note >= 70:
+    print("CC")
+elif note >= 65:
+    print("DC")
+elif note >= 60:
+    print("DD")
+elif note>=55:
+    print("FD")
+else:
+    print("FF")
