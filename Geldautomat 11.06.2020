@@ -1,0 +1,35 @@
+print("""*************************
+Willkommen am Geldautomen
+optionen:
+1. Kontostandabfrage
+2. Einzahlung
+3. Geld abheben
+
+Drücken Sie `q`, um das Programm zu beenden
+*************************
+""")
+
+kontostand = 1000
+
+while True:
+    option = input("Bitte geben Sie `Option` ein:")
+    if option == "q":
+        print("Auf Wiedersehen")
+        break
+    elif option == "1":
+        print("Ihr Kontoabstand: {} €".format(kontostand))
+
+    elif option == "2":
+        betrag = int(input("Bitte geben Sie den Betrag ein, den Sie einzahlen möchten:"))
+        kontostand += betrag
+
+    elif option == "3":
+        abheben_geld = int(input("Bitte geben Sie den Betrag ein, den Sie abheben möchten:"))
+
+        if kontostand - abheben_geld < 0:
+            print("Sie dürfen einen solchen Betrag nicht abheben")
+            continue
+        kontostand -= abheben_geld
+
+    else:
+        print("Ungültige Option")
